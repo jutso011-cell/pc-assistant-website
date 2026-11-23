@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader">
+<div class="loader-logo">
+    <div class="loader-icon">⚙️</div>
+    PC Assistant
+</div>
+    <div class="loader-bar"></div>
+    <p class="loader-text">Käynnistetään PC Assistantia...</p>
+</div>
+
+    <header>
+    <img src="pc-assistant-logo.png" alt="PC Assistant logo" class="logo">
+        <nav>
+            <a href="#etusivu">Etusivu</a>
+            <a href="#tietoa">Tietoa</a>
+            <a href="#ominaisuudet">Ominaisuudet</a>
+            <a class="nav-download" href="#lataa">Lataa PC Assistant</a>
+            <a href="#discord">Discord</a>
+        </nav>
+    </header>
+
+    <main id="etusivu">
+        <h1>Hallitse tietokonettasi helposti.</h1>
+        <p>PC Assistant auttaa seuraamaan tietokoneesi toimintaa.</p>
+        <a class="button" href="#lataa">Tutustu PC Assistantiin</a>
+    </main>
+
+    <section id="tietoa">
+        <h2>Tietoa PC Assistantista</h2>
+
+        <p class="section-description">
+            PC Assistant on työkalu, joka kokoaa tietokoneesi tärkeät
+            toiminnot yhteen helppokäyttöiseen sovellukseen.
+    </p>
+    </section>
+
+    <section id="ominaisuudet">
+         <h2>PC Assistantin ominaisuudet</h2>
+         <p class="section-description">
+             Kaikki tärkeät työkalut yhdessä paikassa.
+         </p>
+
+         <div class="features">
+
+             <div class="feature-card">
+                 <h3><span class="feature-icon">📊</span> Suorituskyky</h3>
+                 <p>Seuraa prosessorin ja muistin käyttöä reaaliajassa.</p>
+             </div>
+
+             <div class="feature-card">
+                 <h3><span class="feature-icon">🎮</span> Pelit</h3>
+                 <p>Kaikki tärkeät pelityökalut helposti käytettävissä.</p>
+             </div>
+
+            <div class="feature-card">
+                <h3><span class="feature-icon">⚙️</span> Järjestelmä</h3>
+                <p>Tarkastele tietokoneesi laitteistoa ja tietoja.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="suorituskyky">
+        <h2>Suorituskyvyn seuranta</h2>
+        <p class="section-description">
+            Näe tietokoneen suorituskyky yhdellä silmäyksellä.
+        </p>
+
+        <div class="performance-grid">
+
+            <div class="performance-card">
+                <h3>CPU</h3>
+                <p>Prosessorin käyttö</p>
+                <span>32%</span>
+            </div>
+
+            <div class="performance-card">
+                <h3>RAM</h3>
+                <p>Muistin käyttö</p>
+                <span>64%</span>
+            </div>
+
+            <div class="performance-card">
+                <h3>GPU</h3>
+                <p>Näytönohjaimen käyttö</p>
+                <span>48%</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="lataa">
+        <h2>Lataa PC Assistant</h2>
+        <p class="section-description">
+            Lataa PC Assistant Windows-tietokoneellesi.
+        </p>
+
+        <div class="download-card">
+            <h3>🖥️ Windows-versio</h3>
+            <p>PC Assistant Windows 10 / 11</p>
+            <a class="button download-button" href="downloads/PC%20Assistant.exe" download>
+    Lataa Windows-versio
+</a>
+        </div>
+    </section>
+
+    <section id="discord">
+       <div class="discord-card">
+           <h2>💬 Liity PC Assistant -yhteisöön</h2>
+
+           <p>
+               Tule mukaan PS Assistant Suomi -Discord-palvelimelle!
+               Keskustele, jaa ideoita ja saa apua PC Assistantiin.
+           </p>
+
+          <a class="button" href="https://discord.gg/Gh38xEM99e" target="_blank" rel="noopener noreferrer">
+               Liity Discordiin
+           </a>
+       </div>
+    </section>
+<footer>
+    <h3>PC ASSISTANT</h3>
+    <p>© 2026 PC Assistant. Kaikki oikeudet pidätetään.</p>
+    <p>Versio v1.0</p>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.feature-card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+<script>
+window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+
+    setTimeout(function() {
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.5s ease";
+
+        setTimeout(function() {
+            loader.style.display = "none";
+        }, 500);
+    }, 1000);
+});
+</script>
+
+<section id="lataa">
+    <h2>Lataa PC Assistant</h2>
+    <p>Lataa PC Assistant Windows-tietokoneellesi.</p>
+
+    <a href="downloads/PC Assistant.exe" class="download-button" download>
+        Lataa Windows-versio
+    </a>
+</section>
+
+</body>
+</html>
